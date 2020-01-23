@@ -111,17 +111,17 @@ public class CeasarCipher {
 	 * @return - the coded text
 	 */
 	public static String encrypt(String s, int steps) {
-		StringBuilder ns = new StringBuilder();
+		StringBuilder newString = new StringBuilder();
 		for (int i = 0; i < s.length(); i++) {
 			if(s.charAt(i) == ' ') {
-				ns.append(s.charAt(i));
+				newString.append(s.charAt(i));
 			}
 			else {
-				char nc = shiftCharacter(s.charAt(i), steps);
-				ns.append(nc);
+				char newChar = shiftCharacter(s.charAt(i), steps);
+				newString.append(newChar);
 			}
 		}
-		return ns.toString();
+		return newString.toString();
 	}
 	
 	/**
